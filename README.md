@@ -14,8 +14,8 @@ Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
    - [ ] * Ter um área onde são exibidas as mensagens no seguinte formato:
     'DD/MM/YY - 'username' - HH:MM => 'mensagem'
    - [ ] * Essa área que as mensagens serão exibidas deve:
-    - [x] * Mostrar as mensagens de todos os usuários e organizadas das mais novas para as mais velhas de baixo para cima.
-    - [ ] * Esta área deve atualizar sempre que um usuário enviar alguma mensagem
+    * Mostrar as mensagens de todos os usuários e organizadas das mais novas para as mais velhas de baixo para cima.
+    * Esta área deve atualizar sempre que um usuário enviar alguma mensagem
      * *Plus: Utilizar redux*
 
     
