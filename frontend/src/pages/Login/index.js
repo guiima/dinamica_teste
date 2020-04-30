@@ -7,7 +7,7 @@ import { Container, ButtonGroup } from "./styles";
 
 export default class Login extends Component {
   state = {
-    isUser: false,
+    isUser: true,
   };
 
   handleUser = () => {

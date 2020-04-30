@@ -10,14 +10,14 @@ export default function LoginConsultant() {
       <Form>
         {/* <label htmlFor="">Insira seu username</label> */}
         <Input name="username" placeholder="Insira o username" />
-        <Input name="password" placeholder="Insira a senha" />
+        {/* <Input name="password" placeholder="Insira a senha" /> */}
         <button className="submit">Entrar</button>
       </Form>
-      <LinkContent>
+      {/* <LinkContent>
         <Link className="link" to="/">
           Registrar-se
         </Link>
-      </LinkContent>
+      </LinkContent> */}
     </Container>
   );
 }
