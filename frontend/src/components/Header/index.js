@@ -11,7 +11,8 @@ export default function Header() {
   return (
     <Container>
       <LogoContent>
-        <span onClick={() => history.push("/chat")}>Formare Tech</span>
+        {/* <span onClick={() => history.push("")}>Formare Tech</span> */}
+        <span>Formare Tech</span>
       </LogoContent>
       <BodyHeader>
         <span>Guima</span>

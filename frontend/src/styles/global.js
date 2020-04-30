@@ -10,6 +10,7 @@ export default createGlobalStyle`
   html, body, #root {
     height: 100%;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: gray;
     /* background-image: linear-gradient(red, blue); */
     
   }
@@ -56,6 +57,19 @@ export default createGlobalStyle`
     border-color: #ced6e0;
     border-radius: 4px;
     font-size: 12px;
+
+    ::placeholder {
+      color: #ced6e0;
+    }
+  }
+
+  select {
+    padding: 5px 0px 5px 10px;
+    border: 1px solid;
+    border-color: #ced6e0;
+    border-radius: 4px;
+    font-size: 12px;
+    color: gray;
 
     ::placeholder {
       color: #ced6e0;
