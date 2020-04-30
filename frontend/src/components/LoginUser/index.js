@@ -13,14 +13,14 @@ export default function LoginUser() {
   return (
     <Container>
       {/* <Form>
-        <Input name="username" placeholder="Insira o username" />
+        <Input type="text" name="username" placeholder="Insira o username" />
         <button onClick={hanldeSubmit} className="submit">
           Entrar
         </button>
       </Form> */}
       <form onSubmit={hanldeSubmit}>
         {/* <label htmlFor="">Insira seu username</label> */}
-        <input name="username" placeholder="Insira o username" />
+        <input type="text" name="username" placeholder="Insira o username" />
         <button className="submit">Entrar</button>
       </form>
     </Container>

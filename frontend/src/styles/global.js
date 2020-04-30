@@ -10,6 +10,8 @@ export default createGlobalStyle`
   html, body, #root {
     height: 100%;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    /* background-image: linear-gradient(red, blue); */
+    
   }
 
   button.primary {
@@ -64,5 +66,10 @@ export default createGlobalStyle`
     font-size: 12px;
     color: #0984e3;
   }
+
+  button {
+    cursor: pointer;
+  }
+
 
 `;

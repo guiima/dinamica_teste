@@ -9,7 +9,7 @@ export default function LoginConsultant() {
     <Container>
       <Form>
         {/* <label htmlFor="">Insira seu username</label> */}
-        <Input name="username" placeholder="Insira o username" />
+        <Input type="text" name="username" placeholder="Insira o username" />
         {/* <Input name="password" placeholder="Insira a senha" /> */}
         <button className="submit">Entrar</button>
       </Form>
