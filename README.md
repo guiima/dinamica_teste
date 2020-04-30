@@ -4,7 +4,7 @@ Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
 
 ## Aplicação usuário:
 
-1- Realizar página de login
+[] - 1- Realizar página de login
   * Somente usar o campo username para realizar o login
   * Não é necessário ter autenticação
 
