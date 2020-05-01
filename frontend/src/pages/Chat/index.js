@@ -9,30 +9,27 @@ import { Container } from "./styles";
 
 export default class Chat extends Component {
   state = {
-    username: "anonimo",
+    usernameState: "",
   };
 
   componentDidMount() {
     const { username } = this.props.match.params;
-    this.setState({ username: username });
+    this.setState({ usernameState: username });
   }
 
   render() {
     return (
       <>
-        <Header />
+        <Header username={this.state.usernameState} />
         <Container>
-          <ListUserWithStatus />
-          <ChatComponent username={this.state.username} />
+          {console.log("stateee", this.state.usernameState)}
+          <ListUserWithStatus username={this.state.usernameState} />
+          <ChatComponent username={this.state.usernameState} />
         </Container>
       </>
     );
   }
 }
-
-// Chat.defaultProps = {
-//   username: "anonimo",
-// };
 
 Chat.propTypes = {
   username: PropTypes.string,

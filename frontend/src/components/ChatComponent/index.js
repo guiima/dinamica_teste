@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import { MdSend } from "react-icons/md";
@@ -17,7 +18,7 @@ export default function ChatComponent({ username }) {
 
   useEffect(() => {
     setUsernameState(username);
-  }, []);
+  }, [username]);
 
   useEffect(() => {
     const handleNewMessage = (newMessage) => {

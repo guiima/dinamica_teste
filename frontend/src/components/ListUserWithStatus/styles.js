@@ -9,7 +9,7 @@ export const UsersContent = styled.div`
   max-width: 200px;
   margin-right: 10px;
 
-  div.usersStatus {
+  div.userStatus {
     display: flex;
     align-items: center;
     justify-content: space-between;
