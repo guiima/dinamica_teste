@@ -22,18 +22,28 @@ export const BodyChat = styled.div`
 
 export const Messages = styled.div`
   margin-bottom: 50px;
-  /* display: flex;
-  flex-direction: column-reverse; */
-  /* background: gray; */
+
+  div.msgcontent {
+    min-height: 480px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
 
   div#scroll {
     display: flex;
-    flex-direction: column-reverse;
+  }
+
+  span.descriptioMsg {
+    font-size: 12px;
   }
 
   div.myMessage {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
     padding-right: 10px;
 
     span.myMsg {
@@ -49,6 +59,9 @@ export const Messages = styled.div`
   div.otherMsg {
     display: flex;
     padding-right: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 
     span.otherMsg {
       border: 1px solid;

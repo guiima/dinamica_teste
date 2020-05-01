@@ -53,24 +53,31 @@ export default function ChatComponent({ username }) {
       <BodyChat>
         <Messages>
           <Scrollbar id="scroll" style={{ height: 490 }}>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={
-                  usernameState === message.username
-                    ? "myMessage top"
-                    : "otherMsg"
-                }
-              >
-                <span
+            <div className="msgcontent">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
                   className={
-                    usernameState === message.username ? "myMsg" : "otherMsg"
+                    usernameState === message.username
+                      ? "myMessage"
+                      : "otherMsg"
                   }
                 >
-                  {message.content}
-                </span>
-              </div>
-            ))}
+                  <span
+                    className={
+                      usernameState === message.username ? "myMsg" : "otherMsg"
+                    }
+                  >
+                    {message.content}
+                  </span>
+                  <div className="descriptioMsg">
+                    <span className="descriptioMsg">{message.date} - </span>
+                    <span className="descriptioMsg">{message.username} - </span>
+                    <span className="descriptioMsg">{message.hour} - </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </Scrollbar>
         </Messages>
       </BodyChat>
