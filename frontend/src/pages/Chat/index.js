@@ -183,55 +183,22 @@ export default class Chat extends Component {
                     <span className="otherMsg">Tudo bem sim e com você ?</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">salve</span>
-                  </div>
-                  <div className="myMessage">
-                    <span className="myMsg">olá</span>
-                  </div>
-                  <div className="myMessage top">
-                    <span className="myMsg">tudo bems ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Oiii</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Tudo bem sim e com você ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
                     <span className="otherMsg">salve</span>
@@ -249,22 +216,22 @@ export default class Chat extends Component {
                     <span className="otherMsg">Tudo bem sim e com você ?</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
                     <span className="otherMsg">salve</span>
@@ -282,22 +249,55 @@ export default class Chat extends Component {
                     <span className="otherMsg">Tudo bem sim e com você ?</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
-                    <span className="otherMsg">sdds</span>
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">salve</span>
+                  </div>
+                  <div className="myMessage">
+                    <span className="myMsg">olá</span>
+                  </div>
+                  <div className="myMessage top">
+                    <span className="myMsg">tudo bems ?</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">Oiii</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">Tudo bem sim e com você ?</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
+                  </div>
+                  <div className="otherMsg">
+                    <span className="otherMsg">opa bão</span>
                   </div>
                   <div className="otherMsg">
                     <span className="otherMsg">salve</span>
