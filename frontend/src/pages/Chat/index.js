@@ -1,319 +1,39 @@
 import React, { Component } from "react";
-import { MdSend } from "react-icons/md";
-import { Scrollbar } from "react-scrollbars-custom";
+import PropTypes from "prop-types";
 
 import Header from "../../components/Header";
-import {
-  Container,
-  ChatContent,
-  UsersContent,
-  SendMessage,
-  BodyChat,
-  Messages,
-} from "./styles";
+import ChatComponent from "../../components/ChatComponent";
+import ListUserWithStatus from "../../components/ListUserWithStatus";
+
+import { Container } from "./styles";
 
 export default class Chat extends Component {
+  state = {
+    username: "anonimo",
+  };
+
+  componentDidMount() {
+    const { username } = this.props.match.params;
+    this.setState({ username: username });
+  }
+
   render() {
     return (
       <>
         <Header />
         <Container>
-          <UsersContent>
-            <Scrollbar style={{ height: 490 }}>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Ana</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Cintia</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Pati</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOn"></div>
-              </div>
-
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Ana</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Cintia</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Pati</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOn"></div>
-              </div>
-
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Ana</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Cintia</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Pati</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOn"></div>
-              </div>
-
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Ana</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Cintia</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Pati</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOn"></div>
-              </div>
-
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Ana</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Cintia</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Pati</span>
-                <div className="statusOn"></div>
-              </div>
-              <div className="usersStatus">
-                <span>Guima</span>
-                <div className="statusOff"></div>
-              </div>
-              <div className="usersStatus">
-                <span>joão</span>
-                <div className="statusOn"></div>
-              </div>
-            </Scrollbar>
-          </UsersContent>
-          <ChatContent>
-            <BodyChat>
-              <Messages>
-                <Scrollbar id="scroll" style={{ height: 490 }}>
-                  <div className="myMessage">
-                    <span className="myMsg">olá</span>
-                  </div>
-                  <div className="myMessage top">
-                    <span className="myMsg">tudo bems ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Oiii</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Tudo bem sim e com você ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">salve</span>
-                  </div>
-                  <div className="myMessage">
-                    <span className="myMsg">olá</span>
-                  </div>
-                  <div className="myMessage top">
-                    <span className="myMsg">tudo bems ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Oiii</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Tudo bem sim e com você ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">salve</span>
-                  </div>
-                  <div className="myMessage">
-                    <span className="myMsg">olá</span>
-                  </div>
-                  <div className="myMessage top">
-                    <span className="myMsg">tudo bems ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Oiii</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Tudo bem sim e com você ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">salve</span>
-                  </div>
-                  <div className="myMessage">
-                    <span className="myMsg">olá</span>
-                  </div>
-                  <div className="myMessage top">
-                    <span className="myMsg">tudo bems ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Oiii</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">Tudo bem sim e com você ?</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">opa bão</span>
-                  </div>
-                  <div className="otherMsg">
-                    <span className="otherMsg">salve</span>
-                  </div>
-                </Scrollbar>
-              </Messages>
-            </BodyChat>
-            <form>
-              <SendMessage>
-                <input type="text" placeholder="Digite uma mensagem" />
-                <MdSend />
-              </SendMessage>
-            </form>
-          </ChatContent>
+          <ListUserWithStatus />
+          <ChatComponent username={this.state.username} />
         </Container>
       </>
     );
   }
 }
+
+// Chat.defaultProps = {
+//   username: "anonimo",
+// };
+
+Chat.propTypes = {
+  username: PropTypes.string,
+};

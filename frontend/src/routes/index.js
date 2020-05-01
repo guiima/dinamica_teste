@@ -9,8 +9,9 @@ import Dashboard from "../pages/Dashboard";
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" exact component={Login} />
-      <Route path="/chat" component={Chat} />
+      <Route exact path="/" component={Login} />
+      <Route exact path="/chat" component={Chat} />
+      <Route exact path="/chat/:username" component={Chat} />
       <Route path="/dashboard" component={Dashboard} />
     </Switch>
   );
