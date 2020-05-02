@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
-// import { Link } from "react-router-dom";
 
 import history from "../../services/history";
 import { Container } from "./styles";

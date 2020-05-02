@@ -83,14 +83,15 @@ export default function ChatComponent({
   function formatDate(date) {
     if (date.length > 10) {
       const dateYYYYMMDD = date.split("T");
+
       const newDate = dateYYYYMMDD[0].split("-");
+
       const day = newDate[2];
       const month = newDate[1];
       const yearYYYY = newDate[0];
+
       const year = yearYYYY.split("");
 
-      // console.log("tesete date", dateYYYYMMDD);
-      // console.log("yeaaaaar", year.split(""));
       return `${day}/${month}/${year[2]}${year[3]}`;
     } else {
       return date;

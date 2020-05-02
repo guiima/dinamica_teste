@@ -30,8 +30,6 @@ export const Messages = styled.div`
     justify-content: flex-end;
     flex-direction: ${(props) =>
       props.olderMessage ? "column-reverse" : "column"};
-    /* flex-direction: column; */
-    /* flex-direction: column-reverse; */
   }
 
   div#scroll {

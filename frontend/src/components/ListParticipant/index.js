@@ -16,8 +16,6 @@ export default function ListParticipant() {
 
     setUsers(response.data);
     setTotalPaticipant(response.data.length);
-
-    console.log("resp parti", response.data.array);
   }
 
   return (

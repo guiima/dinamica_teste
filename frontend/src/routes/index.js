@@ -5,13 +5,11 @@ import Route from "./Route";
 import Login from "../pages/Login";
 import Chat from "../pages/Chat";
 import Dashboard from "../pages/Dashboard";
-import Teste from "../pages/Teste";
 
 export default function Routes() {
   return (
     <Switch>
       <Route exact path="/" component={Login} />
-      <Route exact path="/teste" component={Teste} />
       <Route exact path="/chat" component={Chat} />
       <Route exact path="/chat/:username" component={Chat} />
       <Route exact path="/dashboard" component={Dashboard} />

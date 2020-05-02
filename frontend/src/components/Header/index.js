@@ -20,7 +20,6 @@ export default function Header({ username }) {
   return (
     <Container>
       <LogoContent>
-        {/* <span onClick={() => history.push("")}>Formare Tech</span> */}
         <span>Formare Tech</span>
       </LogoContent>
       <BodyHeader>

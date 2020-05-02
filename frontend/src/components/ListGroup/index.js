@@ -9,7 +9,6 @@ export default function ListGroup({ users }) {
 
   useEffect(() => {
     setListUsers(users);
-    console.log("usersss", users);
   }, [users]);
 
   return (

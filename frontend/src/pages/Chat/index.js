@@ -22,7 +22,6 @@ export default class Chat extends Component {
       <>
         <Header username={this.state.usernameState} />
         <Container>
-          {console.log("stateee", this.state.usernameState)}
           <ListUserWithStatus username={this.state.usernameState} />
           <ChatComponent username={this.state.usernameState} />
         </Container>

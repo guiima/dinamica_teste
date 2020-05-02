@@ -4,9 +4,7 @@ export const DashboardContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 92%; */
   flex-direction: column;
-  /* background: red; */
 
   select {
     margin-top: 10px;
@@ -14,7 +12,6 @@ export const DashboardContent = styled.div`
   }
 
   div#select {
-    /* background: red; */
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -47,7 +44,6 @@ export const FormContent = styled.div`
   }
 
   form {
-    /* background: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +64,6 @@ export const FormContent = styled.div`
     margin-left: 5px;
 
     svg {
-      /* background: red; */
       margin-bottom: -2px;
     }
   }

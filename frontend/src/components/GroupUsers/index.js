@@ -9,13 +9,10 @@ export default function GroupUsers() {
   const [isVIsible, setIsVIsible] = useState(false);
 
   async function groupGenerate() {
-    console.log("bamo");
     const response = await api.post("groupgenerate");
 
     const response2 = await api.get("group");
     setGrpups(response2.data);
-    console.log("resp gene", response.data);
-    console.log("resp gene2", response2.data);
     setIsVIsible(true);
   }
 

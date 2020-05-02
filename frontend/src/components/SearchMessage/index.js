@@ -34,7 +34,6 @@ export default function SearchMessage({ username }) {
     };
 
     socket.on("message.private", handleMessagePrivate);
-    console.log("mesg priv", messages);
 
     return () => socket.off("message.private", handleMessagePrivate);
   }, [messages]);
@@ -45,7 +44,6 @@ export default function SearchMessage({ username }) {
     };
 
     socket.on("message.date", handleMessageDate);
-    console.log("mesg date", messages);
 
     return () => socket.off("message.date", handleMessageDate);
   }, [messages]);
@@ -58,7 +56,6 @@ export default function SearchMessage({ username }) {
   function handleSubmitDate(data) {
     socket.emit("message.date", data);
 
-    console.log("submitei na data", data);
     setDateInput(undefined);
   }
 

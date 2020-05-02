@@ -35,17 +35,6 @@ export default function LoginUser() {
           Entrar
         </button>
       </Form>
-      {/* <form onSubmit={hanldeSubmit}>
-        <label htmlFor="">Insira seu username</label>
-        <input
-          type="text"
-          name="username"
-          placeholder="Insira o username"
-          value={username}
-          onChange={changeInputUsername}
-        />
-        <button className="submit">Entrar</button>
-      </form> */}
     </Container>
   );
 }
