@@ -77,12 +77,15 @@ io.on("connection", (socket) => {
   });
 
   socket.on("message.date", async (data) => {
-    await Message.find({ date: data.date })
+    const newData2 = data.date.split("-");
+    const sendData = `${newData2[2]}-${newData2[1]}-${newData2[0]}`;
+
+    const newData = await Message.find({ date: sendData })
       .then((data) => {
         io.emit("show.message", data);
       })
       .catch((err) => {
-        throw error;
+        io.emit("show.message", []);
       });
   });
 
