@@ -6,7 +6,7 @@ import { Form, Input } from "@rocketseat/unform";
 import * as Yup from "yup";
 
 import ChatComponent from "../ChatComponent";
-import { DashboardContent, FormContent, MessageContent } from "./styles";
+import { DashboardContent, FormContent } from "./styles";
 
 const socket = io("http://localhost:8081");
 socket.on("connect", () =>

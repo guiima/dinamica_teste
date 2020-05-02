@@ -72,15 +72,6 @@ export default function ChatComponent({
       });
     }
 
-    if (message.trim()) {
-      socket.emit("chat.message", {
-        date: `${year}-${month}-01`,
-        username: usernameState,
-        hour: `${hour}-${minutes}`,
-        content: message,
-      });
-    }
-
     setMessage("");
   };
 

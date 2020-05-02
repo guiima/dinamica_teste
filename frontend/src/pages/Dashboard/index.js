@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import SearchMessage from "../../components/SearchMessage";
 import GroupUsers from "../../components/GroupUsers";
 import { Container, DashBoardContent } from "./styles";
+import ListParticipant from "../../components/ListParticipant";
 
 export default class Dashboard extends Component {
   state = {
@@ -20,6 +21,7 @@ export default class Dashboard extends Component {
       <Container>
         <Header />
         <DashBoardContent>
+          <ListParticipant />
           <GroupUsers />
           <SearchMessage username={this.state.usernameState} />
         </DashBoardContent>
