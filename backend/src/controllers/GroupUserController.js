@@ -27,7 +27,7 @@ class GroupUserController {
         .save()
         .then(() => {})
         .catch((error) => {
-          throw error;
+          // throw error;
         });
     }
 
