@@ -40,6 +40,7 @@ export default function SearchMessage({ username }) {
 
   useEffect(() => {
     const handleMessageDate = async (newMessages) => {
+      console.log("nuuu", newMessages);
       await setMessages(newMessages);
     };
 

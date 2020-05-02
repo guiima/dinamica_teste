@@ -86,8 +86,9 @@ export default function ChatComponent({
 
       const newDate = dateYYYYMMDD[0].split("-");
 
-      const day = newDate[2];
-      const month = newDate[1];
+      const day = newDate[1];
+      const month = newDate[2];
+
       const yearYYYY = newDate[0];
 
       const year = yearYYYY.split("");
