@@ -79,6 +79,15 @@ export default function ChatComponent({
     setMessage(e.target.value);
   };
 
+  function formatDate(date) {
+    if (date.length > 10) {
+      const newDate = date.split("T");
+      return newDate[0];
+    } else {
+      return date;
+    }
+  }
+
   return (
     <ChatContent>
       <BodyChat>
@@ -102,7 +111,10 @@ export default function ChatComponent({
                     {message.content}
                   </span>
                   <div className="descriptioMsg">
-                    <span className="descriptioMsg">{message.date} - </span>
+                    {/* <span className="descriptioMsg">{message.date} - </span> */}
+                    <span className="descriptioMsg">
+                      {formatDate(message.date)} -{" "}
+                    </span>
                     <span className="descriptioMsg">{message.username} - </span>
                     <span className="descriptioMsg">{message.hour} - </span>
                   </div>
