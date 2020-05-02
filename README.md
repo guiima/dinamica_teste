@@ -8,12 +8,12 @@ Nesta dinâmica você deve criar (utilizando ReactJS, NodeJS, MongoDB):
   - [x] * Somente usar o campo username para realizar o login
   - [x] * Não é necessário ter autenticação
 
- - [ ] 2- Criar ambiente de chat online
+ - [x] 2- Criar ambiente de chat online
   - [x] * Deve ter um campo para o usuario inserir a mensagem
    - [x] * Algo indentificando na tela qual o usuário está logado
-   - [ ] * Ter um área onde são exibidas as mensagens no seguinte formato:
+   - [x] * Ter um área onde são exibidas as mensagens no seguinte formato:
     'DD/MM/YY - 'username' - HH:MM => 'mensagem'
-   - [ ] * Essa área que as mensagens serão exibidas deve:
+   - [x] * Essa área que as mensagens serão exibidas deve:
     * Mostrar as mensagens de todos os usuários e organizadas das mais novas para as mais velhas de baixo para cima.
     * Esta área deve atualizar sempre que um usuário enviar alguma mensagem
      * *Plus: Utilizar redux*
