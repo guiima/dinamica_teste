@@ -10,6 +10,10 @@ export const Container = styled.div`
     margin-top: 10px;
   }
 
+  span {
+    color: #ff6b6b;
+  }
+
   margin-top: 20px;
   border: 1px solid #ced6e0;
   border-radius: 4px;

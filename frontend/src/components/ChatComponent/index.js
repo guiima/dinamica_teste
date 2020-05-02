@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import { MdSend } from "react-icons/md";
 import PropTypes from "prop-types";
@@ -11,10 +11,18 @@ import { ChatContent, BodyChat, SendMessage, Messages } from "./styles";
 const socket = io("http://localhost:8081");
 socket.on("connect", () => console.log("[IO] Connect => new connection"));
 
-export default function ChatComponent({ username }) {
+export default function ChatComponent({ username, propsMessage }) {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const [usernameState, setUsernameState] = useState("");
+  const scrollbars = useRef(null);
+
+  useEffect(() => {
+    if (propsMessage.length > 0) {
+      console.log("FOOOOOOOOOI dentro", propsMessage);
+      setMessages(propsMessage);
+    }
+  }, []);
 
   useEffect(() => {
     setUsernameState(username);
@@ -27,17 +35,28 @@ export default function ChatComponent({ username }) {
 
     socket.on("chat.message", handleNewMessage);
 
+    scrollbars.current.scrollToBottom();
+
     return () => socket.off("chat.message", handleNewMessage);
   }, [messages]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const now = new Date();
+
+    const day = now.getDate() <= 9 ? `0${now.getDate()}` : now.getDate();
+    const month =
+      now.getMonth() + 1 <= 9 ? `0${now.getMonth() + 1}` : now.getMonth() + 1;
+    const year = now.getFullYear();
+
+    const hour = now.getHours() <= 9 ? `0${now.getHours()}` : now.getHours();
+    const minutes = now.getMinutes();
 
     if (message.trim()) {
       socket.emit("chat.message", {
-        date: "2020-05-02",
+        date: `${year}-${month}-${day}`,
         username: usernameState,
-        hour: "12:00",
+        hour: `${hour}-${minutes}`,
         content: message,
       });
     }
@@ -52,7 +71,7 @@ export default function ChatComponent({ username }) {
     <ChatContent>
       <BodyChat>
         <Messages>
-          <Scrollbar id="scroll" style={{ height: 490 }}>
+          <Scrollbar id="scroll" ref={scrollbars} style={{ height: 490 }}>
             <div className="msgcontent">
               {messages.map((message, index) => (
                 <div
@@ -98,6 +117,12 @@ export default function ChatComponent({ username }) {
   );
 }
 
+ChatComponent.defaultProps = {
+  username: "anonimo",
+  propsMessage: [],
+};
+
 ChatComponent.propTypes = {
   username: PropTypes.string,
+  propsMessage: PropTypes.array,
 };

@@ -86,4 +86,9 @@ export const SendMessage = styled.div`
   svg {
     margin: 0px 5px;
   }
+
+  button {
+    border: none;
+    background: none;
+  }
 `;

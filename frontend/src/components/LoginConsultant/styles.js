@@ -4,6 +4,10 @@ export const Container = styled.div`
   form {
     display: flex;
     flex-direction: column;
+
+    span {
+      color: #ff6b6b;
+    }
   }
 
   button {
@@ -17,7 +21,7 @@ export const Container = styled.div`
   margin-top: 20px;
   border: 1px solid #ced6e0;
   border-radius: 4px;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 20px 20px;
 `;
 
 export const LinkContent = styled.div`

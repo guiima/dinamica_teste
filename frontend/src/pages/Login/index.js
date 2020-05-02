@@ -37,10 +37,6 @@ export default class Login extends Component {
             Sou consultor
           </button>
         </ButtonGroup>
-        {/* <LoginGroup>
-          {this.state.isUser && <LoginUser />}
-          {!this.state.isUser && <LoginConsultant />}
-        </LoginGroup> */}
 
         {this.state.isUser && <LoginUser />}
         {!this.state.isUser && <LoginConsultant />}

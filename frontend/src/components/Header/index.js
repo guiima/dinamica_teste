@@ -24,7 +24,6 @@ export default function Header({ username }) {
         <span>Formare Tech</span>
       </LogoContent>
       <BodyHeader>
-        {console.log("user no header", username)}
         <span>{username}</span>
         <MdSettingsPower onClick={handleExit} />
       </BodyHeader>
