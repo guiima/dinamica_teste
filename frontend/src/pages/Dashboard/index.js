@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <Container>
-        <Header />
+        <Header username={this.state.usernameState} />
         <DashBoardContent>
           <ListParticipant />
           <GroupUsers />

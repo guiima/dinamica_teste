@@ -65,9 +65,9 @@ export default function ChatComponent({
 
     if (message.trim()) {
       socket.emit("chat.message", {
-        date: `${year}-${month}-${day}`,
+        date: `${year}/${month}/${day}`,
         username: usernameState,
-        hour: `${hour}-${minutes}`,
+        hour: `${hour}:${minutes}`,
         content: message,
       });
     }
