@@ -65,7 +65,7 @@ export default function SearchMessage({ username }) {
   }
 
   function changeUsernameInput(e) {
-    setUsernameInput(e.target.valeu);
+    setUsernameInput(e.target.value);
   }
 
   function changeInputDate(e) {

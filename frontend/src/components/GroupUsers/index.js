@@ -10,10 +10,8 @@ export default function GroupUsers() {
 
   async function groupGenerate() {
     const response = await api.post("groupgenerate");
-    console.log("resp 1", response.data);
 
     const response2 = await api.get("group");
-    console.log("resp 2", response2.data);
     setGrpups(response2.data);
     setIsVIsible(true);
   }
