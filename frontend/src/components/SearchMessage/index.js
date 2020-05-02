@@ -26,6 +26,7 @@ export default function SearchMessage({ username }) {
   const [valueSelect, setvalueSelect] = useState(undefined);
   const [olderMessage, setOlderMessage] = useState(false);
   const [usernameInput, setUsernameInput] = useState("");
+  const [DateInput, setDateInput] = useState(undefined);
 
   useEffect(() => {
     const handleMessagePrivate = async (newMessages) => {
@@ -38,19 +39,27 @@ export default function SearchMessage({ username }) {
     return () => socket.off("message.private", handleMessagePrivate);
   }, [messages]);
 
-  function handleSubmitUsername(data) {
-    // e.preventDefault();
-    // const handleMessage = () => {};
-    // socket.on("chat.connected");
-    console.log("submit data", data);
+  useEffect(() => {
+    const handleMessageDate = async (newMessages) => {
+      await setMessages(newMessages);
+    };
 
+    socket.on("message.date", handleMessageDate);
+    console.log("mesg date", messages);
+
+    return () => socket.off("message.date", handleMessageDate);
+  }, [messages]);
+
+  function handleSubmitUsername(data) {
     socket.emit("message.private", data);
     setUsernameInput("");
   }
 
-  function handleSubmitDate(e) {
-    e.preventDefault();
-    console.log("submitei na data");
+  function handleSubmitDate(data) {
+    socket.emit("message.date", data);
+
+    console.log("submitei na data", data);
+    setDateInput(undefined);
   }
 
   function changeSelect(e) {
@@ -60,6 +69,10 @@ export default function SearchMessage({ username }) {
 
   function changeUsernameInput(e) {
     setUsernameInput(e.target.valeu);
+  }
+
+  function changeInputDate(e) {
+    setDateInput(e.target.valeu);
   }
 
   return (
@@ -87,7 +100,13 @@ export default function SearchMessage({ username }) {
           <label>Pesquisa por data: </label>
           <div className="search">
             <div className="err">
-              <Input name="date" type="date" placeholder="Insira o data" />
+              <Input
+                name="date"
+                type="date"
+                placeholder="Insira o data"
+                value={DateInput}
+                onChange={changeInputDate}
+              />
             </div>
             <button type="submit">
               <MdSearch />
