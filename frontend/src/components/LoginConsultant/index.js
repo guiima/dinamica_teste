@@ -14,7 +14,7 @@ export default function LoginConsultant() {
   const [username, setUsername] = useState("");
 
   function handleSubmit() {
-    history.push("/dashboard");
+    history.push(`/dashboard/${username}`);
   }
 
   function changeInputUsername(e) {

@@ -14,7 +14,8 @@ export default function Routes() {
       <Route exact path="/teste" component={Teste} />
       <Route exact path="/chat" component={Chat} />
       <Route exact path="/chat/:username" component={Chat} />
-      <Route path="/dashboard" component={Dashboard} />
+      <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/dashboard/:username" component={Dashboard} />
     </Switch>
   );
 }

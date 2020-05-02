@@ -11,18 +11,29 @@ import { ChatContent, BodyChat, SendMessage, Messages } from "./styles";
 const socket = io("http://localhost:8081");
 socket.on("connect", () => console.log("[IO] Connect => new connection"));
 
-export default function ChatComponent({ username, propsMessage }) {
+export default function ChatComponent({
+  username,
+  propsMessage,
+  olderMessage,
+}) {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const [usernameState, setUsernameState] = useState("");
   const scrollbars = useRef(null);
 
   useEffect(() => {
-    if (propsMessage.length > 0) {
-      console.log("FOOOOOOOOOI dentro", propsMessage);
-      setMessages(propsMessage);
-    }
+    socket.emit("show.message");
   }, []);
+
+  useEffect(() => {
+    const handleNewMessages = async (newMessages) => {
+      await setMessages(newMessages);
+    };
+
+    socket.on("show.message", handleNewMessages);
+
+    return () => socket.off("show.message", handleNewMessages);
+  }, [messages]);
 
   useEffect(() => {
     setUsernameState(username);
@@ -70,7 +81,7 @@ export default function ChatComponent({ username, propsMessage }) {
   return (
     <ChatContent>
       <BodyChat>
-        <Messages>
+        <Messages olderMessage={olderMessage}>
           <Scrollbar id="scroll" ref={scrollbars} style={{ height: 490 }}>
             <div className="msgcontent">
               {messages.map((message, index) => (
@@ -120,9 +131,11 @@ export default function ChatComponent({ username, propsMessage }) {
 ChatComponent.defaultProps = {
   username: "anonimo",
   propsMessage: [],
+  olderMessage: false,
 };
 
 ChatComponent.propTypes = {
   username: PropTypes.string,
   propsMessage: PropTypes.array,
+  olderMessage: PropTypes.bool,
 };

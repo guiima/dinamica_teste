@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MdSearch } from "react-icons/md";
 import io from "socket.io-client";
 import ChatComponent from "../ChatComponent";
+import PropTypes from "prop-types";
 
 import { DashboardContent, FormContent, MessageContent } from "./styles";
 
@@ -10,25 +11,10 @@ socket.on("connect", () =>
   console.log("[IO] Connect => new connection serach msg")
 );
 
-export default function SearchMessage() {
+export default function SearchMessage({ username }) {
   const [messages, setMessages] = useState([]);
-  const [isVisible, setisVisible] = useState(false);
-
-  useEffect(() => {
-    socket.emit("show.message");
-  }, []);
-
-  useEffect(() => {
-    const handleNewMessages = async (newMessages) => {
-      await setMessages(newMessages);
-      setisVisible(true);
-    };
-
-    socket.on("show.message", handleNewMessages);
-    console.log("entrei 2", messages);
-
-    return () => socket.off("show.message", handleNewMessages);
-  }, [messages]);
+  const [valueSelect, setvalueSelect] = useState(undefined);
+  const [olderMessage, setOlderMessage] = useState(false);
 
   function handleSubmitUsername(e) {
     // e.preventDefault();
@@ -39,6 +25,12 @@ export default function SearchMessage() {
   function handleSubmitDate(e) {
     e.preventDefault();
     console.log("submitei na data");
+  }
+
+  function changeSelect(e) {
+    setvalueSelect(e.target.value);
+    setOlderMessage(!olderMessage);
+    console.log("mudou");
   }
 
   return (
@@ -69,14 +61,21 @@ export default function SearchMessage() {
         </form>
       </FormContent>
       <div id="select">
-        <select id="data">
+        <select id="data" value={valueSelect} onChange={changeSelect}>
           <option value="Recentes">Recentes</option>
           <option value="Mais antigas">Mais antigas</option>
         </select>
       </div>
-      {/* <MessageContent></MessageContent> */}
-      {console.log("tem msg?", messages)}
-      {isVisible && <ChatComponent propsMessage={messages} />}
+      <ChatComponent
+        username={username}
+        propsMessage={messages}
+        olderMessage={olderMessage}
+      />
     </DashboardContent>
   );
 }
+
+SearchMessage.propTypes = {
+  username: PropTypes.string,
+  propsMessage: PropTypes.array,
+};
