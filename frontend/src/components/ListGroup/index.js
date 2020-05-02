@@ -9,6 +9,7 @@ export default function ListGroup({ users }) {
 
   useEffect(() => {
     setListUsers(users);
+    console.log("userrrs", users);
   }, [users]);
 
   return (
@@ -16,7 +17,7 @@ export default function ListGroup({ users }) {
       <Scrollbar id="scroll" style={{ height: 100, width: 100 }}>
         <UsersContent>
           {listUsers.map((user, index) => (
-            <span key={index}>{user.username}</span>
+            <span key={index}>{user === null ? null : user.username}</span>
           ))}
         </UsersContent>
       </Scrollbar>
