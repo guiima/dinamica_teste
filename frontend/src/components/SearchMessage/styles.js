@@ -27,6 +27,25 @@ export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
 
+  div.search {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-top: 13px;
+    }
+  }
+
+  div.err {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-left: 20px;
+      color: #ff6b6b;
+    }
+  }
+
   form {
     /* background: red; */
     display: flex;
